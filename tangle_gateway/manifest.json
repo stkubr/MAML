@@ -1,0 +1,12 @@
+{
+    "author": "Stanislav Kubrak",
+    "description": "Makes the web+iota:/ protocol available",
+    "manifest_version": 2,
+    "name": "IOTA Web Protocol",
+    "version": "0.1",
+    "protocol_handlers": [{
+        "protocol": "web+iota",
+        "name": "IotaWeb",
+        "uriTemplate": "http://localhost:33333/%s"
+    }]
+}
