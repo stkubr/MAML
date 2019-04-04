@@ -7,7 +7,7 @@ from iota.adapter.wrappers import RoutingWrapper
 logger = logging.getLogger('TangleConnector')
 
 class TangleConnector:
-    def __init__(self, url='https://nodes.thetangle.org:443', seed="TESTSEED9"):
+    def __init__(self, url='https://perma.iota.partners:443', seed="TESTSEED9"):
         self.iri_url = url
         self.iota_api = Iota(url, seed)
 
