@@ -8,6 +8,6 @@ install:
   - pip install pytest-cov
   - pip install coveralls
 script:
-  - pytest --cov=MAML/
+  - pytest --cov=ciphers/ mam_lite/ tangle_connector/
 after_success:
   - coveralls
