@@ -1,4 +1,5 @@
 import logging
+from typing import List
 from iota import Address
 from ciphers import AESCipher
 from mam_lite import Response, hash_tryte, AuthCommunicator
@@ -106,6 +107,19 @@ class MaskedAuthMsgStream:
             return response
         else:
             return None
+
+    def read_all(self) -> List[Response]:
+        '''
+        Calls read() several time until there is None response
+        '''
+        responses = []
+        while(True):
+            res = self.read()
+            if res:
+                responses.append(res)
+            else:
+                break
+        return responses
 
     def split_channel(self, new_channel_pwd: str):
         '''
